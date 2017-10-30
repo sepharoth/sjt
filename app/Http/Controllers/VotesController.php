@@ -35,9 +35,8 @@ class VotesController extends Controller
      * @param $id
      * @return Response
      */
-    public function store(Requests\VoteRequest $request)
+    public function store(Request $request)
     {
-        dd($request);
         $postId = $request->input('postId');
         $userId = $request->user()->id;
         $value = $request->input('value');

@@ -48,6 +48,9 @@ Route::get('data/islogged', function() {
 
 Route::resource('posts', 'PostsController');
 Route::resource('votes', 'VotesController');
+
+
+
 Route::resource('commentvotes', 'CommentVotesController');
 Route::resource('profile', 'ProfilesController');
 

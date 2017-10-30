@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Reddit</title>
+    <title>SJT Heuristics</title>
     <script src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
@@ -33,7 +33,7 @@
 <body>
 
 <!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top navbar-dark bg-dark">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -42,12 +42,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Reddit</a>
+            <a class="navbar-brand" href="#">Chimera</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ URL::action('HomeController@index') }}">Home</a></li>
-                <li class="{{ Request::is('subreddit') ? 'active' : '' }}"><a href="{{ URL::action('SubredditController@index') }}">Subreddits</a></li>
+                <li class="{{ Request::is('subreddit') ? 'active' : '' }}"><a href="{{ URL::action('SubredditController@index') }}">Heuristics</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if(Auth::check())
@@ -149,7 +149,7 @@
                 }, 500);
 
             } else {
-                $.post('votes', {postId:postId, value:value}, function(data) {
+                $.post('/votes', {postId:postId, value:value}, function(data) {
                     // success here
                 }).fail(function() {
                     sweetAlert("Oops...", "Something went wrong...", "error");
@@ -173,7 +173,7 @@
                 }, 500);
 
             } else {
-                $.post('commentvotes', {commentId:commentId, value:value}, function(data) {
+                $.post('/commentvotes', {commentId:commentId, value:value}, function(data) {
                     // success here
                 }).fail(function() {
                     sweetAlert("Oops...", "Something went wrong...", "error");
