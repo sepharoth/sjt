@@ -17,9 +17,9 @@
             var subreddits = new Bloodhound({
                 datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
                 queryTokenizer: Bloodhound.tokenizers.whitespace,
-                prefetch: 'data/subreddits',
+                prefetch: '/data/subreddits',
                 remote: {
-                    url: 'data/subreddits/%QUERY',
+                    url: '/data/subreddits/%QUERY',
                     wildcard: '%QUERY'
                 }
             });
