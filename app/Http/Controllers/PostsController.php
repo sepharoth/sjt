@@ -34,8 +34,7 @@ class PostsController extends Controller
 
     public function create()
     {
-        $subreddits = Subreddit::lists('name', 'id')->toArray();
-
+        $subreddits = \App\Subreddit::lists('name', 'id')->toArray();
         return view('post/create')->with('subreddits', $subreddits);
     }
 
@@ -105,6 +104,7 @@ class PostsController extends Controller
             }
             return redirect('/subreddit');
         }
+        
         Auth::user()->posts()->create($request->all());
 
         return redirect('/subreddit');

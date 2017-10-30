@@ -93,8 +93,8 @@
 
                 <p>
                     <div id="remote">
-                        <input class="form-control typeahead" type="text" placeholder="Choose a Subreddit" name="subreddit_name">
-                        <input type="hidden" class="subreddit_id" value="" name="subreddit_id">
+<!--                         <input class="form-control typeahead" type="text" placeholder="Choose a Subreddit" name="subreddit_name">
+ -->                        <input type="hidden" class="subreddit_id" value="1" name="subreddit_id">
                     </div>
                 </p>
 
