@@ -45,7 +45,7 @@ class ProfilesController extends Controller
 
     }
 
-    public function update(Request $request, User $user, Requests\EditUserRequest $request)
+    public function update(Request $request, User $user)
     {
         $user = User::where('id', '=', Auth::id())->first();
         $user->name = Input::get('name');
