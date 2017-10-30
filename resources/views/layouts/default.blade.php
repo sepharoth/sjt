@@ -13,7 +13,7 @@
     <title>EdMedSoc Resource Bank</title>
     <script src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap-editable.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/jquery.upvote.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/sweetalert.css') }}">
